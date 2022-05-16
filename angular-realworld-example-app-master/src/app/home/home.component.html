@@ -1,0 +1,49 @@
+<div class="home-page">
+
+  <div class="banner" *appShowAuthed="false">
+    <div class="container">
+      <h1 class="logo-font">Sample</h1>
+      <p>Layout1...</p>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-9">
+        <div class="feed-toggle">
+          <ul class="nav nav-pills outline-active">
+            <li class="nav-item">
+              <a class="nav-link"
+                 [ngClass]="{'active': listConfig.type === 'feed'}"
+                 (click)="setListTo('feed')">
+                 Layout2
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                 [ngClass]="{'active': listConfig.type === 'all' && !listConfig.filters.tag}"
+                 (click)="setListTo('all')">
+                 Layout3
+              </a>
+            </li>
+            <li class="nav-item" [hidden]="!listConfig.filters.tag">
+              <a class="nav-link active">
+                <i class="ion-pound"></i> {{ listConfig.filters.tag }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <app-article-list [limit]="10" [config]="listConfig"></app-article-list>
+      </div>
+
+      <div class="col-md-3">
+        <div class="sidebar">
+          <p>Layout4</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
