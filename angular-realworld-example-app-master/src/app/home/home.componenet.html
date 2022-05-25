@@ -1,0 +1,62 @@
+<main>
+  <div class="container-fluid pt-3">
+    <div
+      *ngIf="themeService.theme | async as theme"
+      class="p-5 m-3 border rounded-2"
+      [ngClass]="{
+        'bg-light': theme.isLightTheme,
+        'bg-dark': theme.isDarkTheme
+      }"
+    >
+      <h1>Contract Services</h1>
+
+      <p>List of Available options</p>
+
+      <div class="row">
+        <div class="col">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>contract service utilities</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem>Approve Contract</button>
+              <button ngbDropdownItem>Cancel Contract</button>
+              <button ngbDropdownItem>Create Poller Events</button>
+              <button ngbDropdownItem>Replay Approved Contract</button>
+              <button ngbDropdownItem>Replay Ldm Message</button>
+              <button ngbDropdownItem>Replay To EFP</button>
+              <button ngbDropdownItem>ReplayToLoanet</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div
+      *ngIf="themeService.theme | async as theme"
+      class="p-5 m-3 border rounded-2"
+      [ngClass]="{
+        'bg-light': theme.isLightTheme,
+        'bg-dark': theme.isDarkTheme
+      }"
+    >
+      <h1>Service II </h1>
+
+      <p>List of Available options</p>
+
+      <p><a class="btn btn-primary btn-lg" [routerLink]="['/', 'about']">utilities</a></p>
+    </div>
+    <div
+      *ngIf="themeService.theme | async as theme"
+      class="p-5 m-3 border rounded-2"
+      [ngClass]="{
+        'bg-light': theme.isLightTheme,
+        'bg-dark': theme.isDarkTheme
+      }"
+    >
+      <h1>Service III</h1>
+
+      <p>List of Available options</p>
+
+      <p><a class="btn btn-primary btn-lg" [routerLink]="['/', 'about']">utilities</a></p>
+    </div>
+   </div>
+
+</main>
