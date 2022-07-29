@@ -1,0 +1,141 @@
+
+  .content { 
+    align-items: center;
+    flex: 0 0 1.8cm;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: center;
+    margin-top: 29px
+    
+  }
+  button.card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #eeeeee;
+    background-color: #58c566;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    text-align: center;
+  }
+    
+  .card-container button.card:not(:last-child) {
+    margin-right: 166px;
+  }
+
+  button.card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container button.card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container button.card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container button.card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  button.card.highlight-card {
+    background-color: #19d251;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  button.card.card.highlight-card span {
+    margin-left: 60px;
+  }
+  .first-block {
+    margin: 14px;
+    border: 3px solid;
+    border-color: white;
+    text-align: center;
+    color:white;
+    border-radius: 4px;
+    
+  }
+  .second-block{
+    border: 2px solid rgb(255, 255, 255);
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-top: 4%;
+    color:white;
+    line-height: 3em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+th{
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+  background-color: #58c566;
+  font-size: 14px;
+  color: white
+}
+.incident-table {
+  margin-right: 20px;
+  text-align: center;
+  width: 32%;
+}
+.change-table {
+  margin-right: 20px;
+  text-align: center;
+  width: 32%;
+}
+
+table, th , td {
+  border: 1px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+  padding: 5px;
+  margin:20px;
+}
+span.table{
+  border: 1px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+  padding: 5px;
+  margin:20px;
+  
+}
+
+table tr:nth-child(odd) {
+  background-color: #cad4cd;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.modal-header{
+  background-color: #58c566;
+}

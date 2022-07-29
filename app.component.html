@@ -1,0 +1,135 @@
+
+<!-- Toolbar -->
+    <div id ="content" class="content" role="main">
+
+      <!-- Resources -->
+     
+      <div class="first-block">
+    
+            <h1>Ready For Business </h1>
+    
+            <div class="card-container">
+              <button class="card" id = "na-btn" name = "NA(North America)" (click)="openModel(content,$event)">
+                <h4> NA<br>(North America)</h4>
+              </button>
+              <button class="card" id = "emea-btn"  name = "EMEA(Europe, Middle East & Africa)" (click)="openModel(content,$event)">
+                <h4> EMEA <br>(Europe, Middle East & Africa) </h4>
+              </button>
+              <button class="card" id = "apac-btn" name = "APAC(Asia Pacific)" (click)="openModel(content,$event)">
+                <h4> APAC <br>(Asia Pacific) </h4>
+              </button>
+            </div>
+              
+      </div>
+      <div class ="second-block">
+         R/A/G color on the box derived from EPD status,clickable,opens a pop up window with status of components as different boxes
+      </div>
+      
+      <div class="card-container">
+        <span class ="incident-table ">
+          <h1> Incidents</h1>
+        
+        <table class="table table-striped">
+          <thead>
+              <tr>
+                <th>Ongoing Incidents</th>
+                <th>Past Incidents( 24 hours )</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr >
+              <td></td>
+              <td></td>
+              
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              
+            </tr>
+          </tbody>
+        </table>
+    
+        </span>
+        <span class="change-table" >
+        <h1> Changes</h1>
+        <table class="table table-striped">
+          <thead>
+              <tr>
+                <th>CHANGE#</th>
+                <th>Owner</th>
+                <th>Component</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr >
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr >
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        </span>
+        
+      </div>
+
+      <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Status</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+          <p >Hello {{msg}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Ok</button>
+        </div>
+      </ng-template>
+    </div>
+
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
